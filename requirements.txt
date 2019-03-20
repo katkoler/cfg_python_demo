@@ -1,5 +1,5 @@
 flask
 requests
 freeze
---upgrade setuptools
+setuptools
 dotenv
