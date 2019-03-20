@@ -1,2 +1,1 @@
-# cfg_python_demo
-heroku deployment demo
+# cfg_python_project
