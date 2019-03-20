@@ -1,12 +1,23 @@
 from flask import Flask, render_template, request
 import json
 import os
+from dotenv import load_dotenv
+
+# load dotenv in the base root
+APP_ROOT = os.path.join(os.path.dirname(__file__), '.')   # refers to application_top
+dotenv_path = os.path.join(APP_ROOT, '.env')
+load_dotenv(dotenv_path)
+
+
+consumer_key = os.getenv("twitter_consumer_key")
 
 app = Flask("my_first_app")
 
 @app.route("/")
 def say_hello():
+  print(consumer_key)
   return render_template("index.html")
+
 
 @app.route('/hello')
 def hello():
